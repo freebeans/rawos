@@ -1,6 +1,25 @@
 # rawos
 My attempt to learn how operating systems works. Feel free to fork this.
 
+<!---
+I have commented this out since this feature doesn't seem very useful right now.
+
+I'll try to explain every possible detail. The "dirty" source with comments is located at the src_explained/ folder.
+You can run ```make update``` to read all source files inside src_explained/ and create uncommented copies on the project folder.
+That way you can develop inside the src_explained/ folder using big chunks of comments and create pretty versions of it later.
+
+For instance, ```make update``` will remove all the lines starting with ```;;```:
+- ```;; This comment will be removed```
+- ```; This comment will be kept```
+-->
+
+The makefile contains some useful rules:
+- ```make all``` builds the files.
+- ```make clean``` wipes the generated files.
+- ```make view``` shows an hex dump of the file (```lfhex``` is required).
+- ```make run``` runs the generated files (```qemu``` is required).
+
+Be aware that both ```view``` and ```run``` targets may rebuild the generated files.
 
 #### Why
 I've been wanting to learn how operating systems work.
